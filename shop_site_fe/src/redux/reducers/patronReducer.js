@@ -1,11 +1,37 @@
-import {} from '../actions/type';
+import {
+    GET_PATRON_PROFILE,
+    ADD_PATRON_PROFILE,
+    UPDATE_PATRON_PROFILE,
+    DELETE_PATRON_PROFILE,
+
+} from '../actions/type';
 
 const initialState = {
 
+}
+
+const productReducer = (state = initialState, action) => {
+	switch (action.type) {
+        case GET_PATRON_PROFILE:
+            return {
+                ...state,
+            };
+        case ADD_PATRON_PROFILE:
+            return {
+                ...state,
+            };  
+        case UPDATE_PATRON_PROFILE:
+            return {
+                ...state,
+            };
+        case DELETE_PATRON_PROFILE:
+            return {
+                ...state,
+            };    
+    
+        default:
+            return state;
+    }
 };
 
-export default (state = initialState, action) => {
-    switch (action.type) {
-
-    }
-}
+export default productReducer;

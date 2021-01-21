@@ -2,8 +2,7 @@ import {
     GET_PATRON_PROFILE,
     ADD_PATRON_PROFILE,
     UPDATE_PATRON_PROFILE,
-    DELETE_PATRON_PROFILE,
-
+    DELETE_PATRON_PROFILE
 } from '../actions/type';
 
 /*
