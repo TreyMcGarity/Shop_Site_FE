@@ -1,22 +1,23 @@
 import React from 'react';
-import Listing from './modals/Listing';
-import Profile from './modals/Profile';
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import '../styles/header.css';
 
 const Header = () => {
     return (
-        <div>
-            App Logo | <img src='' alt='cart'/> | <a href='#'>Profile</a>
-            
-            <button>Listing</button> | search field
+        <div className='header.css'>
+            <div>
+                <h1>DECOREM</h1>
+                <Link to='/profile'>Profile</Link>
+            </div>
+            <div>
+                <Link to='/listing'>Listing</Link>
+                <form>
+                    <inpt></inpt>
+                </form>
+            </div>
         </div>
     )
 }
 
-const mapState = state => {
-    return {
-		state: state.products.data, 
-	};
-}
-
-export default connect(mapState, Header);
+export default Header;

@@ -9,5 +9,5 @@ import store from './redux/store';
 ReactDOM.render(
     <Provider store={store}>
         <Router />
-    </Provider>
+    </Provider> 
 ,document.getElementById('root'));
