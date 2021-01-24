@@ -1,4 +1,7 @@
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: -2%;
+    background-color: rgb(250,240,230);
+    border-bottom: 1px solid black;
 }
