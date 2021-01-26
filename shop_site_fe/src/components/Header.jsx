@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 // import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 // import { getProduct } from '../redux/actions/productActions';
+import Listing from './modals/Listing';
+import Profile from './modals/Profile';
+import Backdrop from '../utils/backdrop';
 import '../styles/header.css';
 
 const Header = () => {
+    const [listing, showListing] = useState(false);
+    const [profile, showProfile] = useState(false);
     // const dispatch = useDispatch();
     const [search, setSearch] = useState("");
 	const handleChange = (e) => {
@@ -18,12 +22,24 @@ const Header = () => {
         <div className='header'>
             <div>
                 <h1>DECOREM</h1>
-                <Link 
-                    to='/listing'
-                    >Listing</Link>
+                <div className="listingbtn" onClick={() => showListing(true)}>
+                    { listing ?
+                        <div>
+                            <Listing />
+                            <Backdrop show={listing} set={showListing} /> 
+                        </div>
+                    : "Shop" }
+                </div>
             </div>
             <div>
-                <Link to='/profile'>Profile</Link>
+                <div className="profilebtn" onClick={() => showProfile(true)}>
+                    { profile ?
+                        <div>
+                            <Profile />
+                            <Backdrop show={profile} set={showProfile} /> 
+                        </div>
+                    : "Profile" }
+                </div>
                 <form onSubmit={handleSubmit}>
                     <input
 						type="text"
