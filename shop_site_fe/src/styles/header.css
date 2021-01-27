@@ -1,7 +1,30 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    /* margin: -2%; */
-    padding: 2%;
+    display: flex; 
+    flex-direction: row; 
     background-color: rgb(250,240,230);
+}
+
+.header .listingbtn .menu {
+    height: 2em;
+    width: 2em;
+}
+
+.header .profilebtn .account {
+    height: 2em;
+    width: 2em;
+}
+
+.header .searchbtn .search-bar {
+    height: 2em;
+    width: 2em;
+}
+
+.header .favoritebtn .favs {
+    height: 2em;
+    width: 2em; 
+}
+
+.header .cartbtn .cart {
+    height: 2em;
+    width: 2em; 
 }
