@@ -8,10 +8,11 @@ import Cart from './modals/Cart';
 import SavedList from './modals/SavedList';
 import Backdrop from '../utils/backdrop';
 import menu from '../utils/images/hamburger-menu.png';
-import account from '../utils/images/account.png';
+import account from '../utils/images/profile-.png';
 import searchIcon from '../utils/images/search-icon.png';
-import cart from '../utils/images/cart.png';
-import heart from '../utils/images/heart.png';
+import otherSearchIcon from '../utils/images/search-icon-other.png';
+import cart from '../utils/images/cart-.png';
+import heart from '../utils/images/fav-heart.png';
 import '../styles/header.css';
 
 const Header = () => {
