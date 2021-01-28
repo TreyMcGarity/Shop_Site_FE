@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import { useDispatch } from "react-redux";
 // import { getProduct } from '../redux/actions/productActions';
 import Listing from './modals/Listing';
+import Search from './modals/Search';
 import Profile from './modals/Profile';
 import Cart from './modals/Cart';
 import SavedList from './modals/SavedList';
@@ -14,13 +15,13 @@ import heart from '../utils/images/heart.png';
 import '../styles/header.css';
 
 const Header = () => {
+    // const dispatch = useDispatch();
     const [listing, showListing] = useState(false);
     const [searching, showSearching] = useState(false);
+    const [search, setSearch] = useState("");
     const [carting, showCarting] = useState(false);
     const [savedList, showSavedList] = useState(false);
     const [profile, showProfile] = useState(false);
-    // const dispatch = useDispatch();
-    const [search, setSearch] = useState("");
 	const handleChange = (e) => {
 		setSearch({ ...search, [e.target.name]: e.target.value });
 	};
@@ -41,19 +42,19 @@ const Header = () => {
             <h1>DECOREM</h1>
             <div className="searchbtn" onClick={() => showSearching(true)}>
                 { searching ?
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="search"
-                        value={search}
-                        onChange={handleChange}
-                    />
-                </form>
+                    <div>
+                        <Search 
+                            search={search} 
+                            handleChange={handleChange}
+                            handleSubmit={handleSubmit}
+                            showSearching={showSearching}
+                        />
+                        <Backdrop show={searching} set={showSearching} />
+                    </div>
                 : <img className="search-bar" src={searchIcon} alt="search-bar" /> }
             </div>
             <div className="cartbtn" onClick={() => showCarting(true)}>
-                { savedList ?
+                { carting ?
                     <div>
                         <Cart />
                         <Backdrop show={carting} set={showCarting} /> 

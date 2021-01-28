@@ -1,0 +1,21 @@
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    right: 20%;
+    width: 20em;
+    padding: 5%;
+    position: relative;
+    background-color: rgb(250,240,230);
+    border: 1px solid black;
+    z-index: 10;
+}
+
+.searchBar input {
+    border-radius: 50%;
+}
+
+.searchBar .x {
+    Width: 2em;
+    height: 2em;
+}
