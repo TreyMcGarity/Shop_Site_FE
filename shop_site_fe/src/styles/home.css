@@ -5,6 +5,12 @@ Green: B3E6CC
 
 .home {
     /* margin: -2%; */
-    height: 575px;
+    /* height: 575px; */
     background-color: rgb(187, 229, 193);
+}
+
+.image {
+    padding: 2em;
+    height: 20em;
+    width: 20em;
 }
