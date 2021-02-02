@@ -6,6 +6,10 @@
     background-color: rgb(250,240,230);
 }
 
+.header h1 {
+    font-family: 'Tangerine', cursive;
+}
+
 .header .listingbtn .menu {
     height: 2em;
     width: 2em;
@@ -26,7 +30,7 @@
     width: 2em; 
 }
 
-.header .cartbtn .cart {
+.header .cartbtn .cartpic {
     height: 2em;
     width: 2em; 
 }

@@ -60,7 +60,7 @@ const Header = () => {
                         <Cart />
                         <Backdrop show={carting} set={showCarting} /> 
                     </div>
-                : <img className="cart" src={cart} alt="heart" /> }
+                : <img className="cartpic" src={cart} alt="heart" /> }
             </div>
             <div className="favoritebtn" onClick={() => showSavedList(true)}>
                 { savedList ?
