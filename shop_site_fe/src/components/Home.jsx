@@ -8,7 +8,7 @@ import '../styles/home.css';
 const Home = () => {
     return (
         <div className='home'>
-            <div className="row">
+            {/* <div className="row">
                 <img className="image" src={Wreath1} alt="wallart"/>
                 <img className="image" src={Wreath2} alt="wallart"/>
             </div>
@@ -17,7 +17,7 @@ const Home = () => {
             </div>
             <div className="row">
                 <img className="image" src={Necklace1} alt="jewlery"/>
-            </div>
+            </div> */}
         </div>
     )
 }
