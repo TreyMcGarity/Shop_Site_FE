@@ -4,9 +4,7 @@ import '../../styles/profile.css';
 const Profile = () => {
     return (
         <div className='profile'>
-            Pic | Name
-            <a href='#'>Profile</a>
-            <a href='#'>Settings</a>
+            Pic | Name | Profile | Settings
             Cart:
         </div>
     )
