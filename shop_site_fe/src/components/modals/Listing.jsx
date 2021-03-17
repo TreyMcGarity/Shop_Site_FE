@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/listing.css';
+import '../../styles/listing.scss';
 
 const Listing = () => {
     return (

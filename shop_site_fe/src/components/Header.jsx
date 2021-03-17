@@ -12,7 +12,7 @@ import account from '../utils/images/profile-.png';
 import searchIcon from '../utils/images/search-icon.png';
 import cart from '../utils/images/cart-.png';
 import heart from '../utils/images/fav-heart.png';
-import '../styles/header.css';
+import '../styles/header.scss';
 
 const Header = () => {
     // const dispatch = useDispatch();

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/backdrop.css';
+import '../styles/backdrop.scss';
 
 const Backdrop = (props) => {
     return (
