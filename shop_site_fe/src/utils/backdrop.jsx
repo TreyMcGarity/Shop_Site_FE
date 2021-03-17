@@ -5,9 +5,9 @@ const Backdrop = (props) => {
     return (
         <div 
         className={props.show ? 'backdrop':'backdrop-closed'}
-        onClick={(e)=> {
-            e.cancelBubble = true;
-            e.stopPropagation();
+        onClick={(event)=> {
+            event.cancelBubble = true;
+            event.stopPropagation();
             props.set(false)
             }}>
         </div>
