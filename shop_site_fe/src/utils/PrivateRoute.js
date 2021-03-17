@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AxiosWithCred from "./axiosWithCred";
+import AxiosWithCreds from "./axoisWithCreds";
 import { Route, Redirect } from "react-router";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -7,7 +7,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 	useEffect(() => {
 		const checkAuth = async () => {
 			try {
-				await AxiosWithCred.get("/auth/verify_session");
+				await AxiosWithCreds.get("/auth/verify_session");
 				setAuth({
 					isAuth: true,
 					ready: true,
@@ -17,7 +17,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 			}
 		};
 		checkAuth();
-	}, []);
+	}, [auth]);
 	return (
 		<>
 			{auth.ready && (
