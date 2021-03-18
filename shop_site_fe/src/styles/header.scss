@@ -1,4 +1,5 @@
 .header {
+    height: 2.5em;
     display: flex; 
     flex-direction: row;
     justify-content: space-evenly; 
@@ -10,27 +11,7 @@
     font-family: 'Tangerine', cursive;
 }
 
-.header .listingbtn .menu {
+.header-link {
     height: 2em;
-    width: 2em;
-}
-
-.header .profilebtn .account {
-    height: 2em;
-    width: 2em;
-}
-
-.header .searchbtn .search-bar {
-    height: 2em;
-    width: 2em;
-}
-
-.header .favoritebtn .favs {
-    height: 2em;
-    width: 2em; 
-}
-
-.header .cartbtn .cartpic {
-    height: 2em;
-    width: 2em; 
+    width: 2em;  
 }

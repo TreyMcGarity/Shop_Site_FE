@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/pwreset.scss';
+import '../../styles/pwReset.scss';
 
 const PWreset = () => {
     return (

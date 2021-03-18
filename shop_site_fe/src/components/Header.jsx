@@ -37,7 +37,7 @@ const Header = () => {
                         <Listing />
                         <Backdrop show={listing} set={showListing} /> 
                     </div>
-                : <img className="menu" src={menu} alt="menu" /> }
+                : <img className="menu header-link" src={menu} alt="menu" /> }
             </div>
             <h1>DECOREM</h1>
             <div className="searchbtn" onClick={() => showSearching(true)}>
@@ -51,7 +51,7 @@ const Header = () => {
                         />
                         <Backdrop show={searching} set={showSearching} />
                     </div>
-                : <img className="search-bar" src={searchIcon} alt="search-bar" /> }
+                : <img className="search-bar header-link" src={searchIcon} alt="search-bar" /> }
             </div>
             <div className="cartbtn" onClick={() => showCarting(true)}>
                 { carting ?
@@ -59,7 +59,7 @@ const Header = () => {
                         <Cart />
                         <Backdrop show={carting} set={showCarting} /> 
                     </div>
-                : <img className="cartpic" src={cart} alt="heart" /> }
+                : <img className="cartpic header-link" src={cart} alt="heart" /> }
             </div>
             <div className="favoritebtn" onClick={() => showSavedList(true)}>
                 { savedList ?
@@ -67,7 +67,7 @@ const Header = () => {
                         <SavedList />
                         <Backdrop show={savedList} set={showSavedList} /> 
                     </div>
-                : <img className="favs" src={heart} alt="heart" /> }
+                : <img className="favs header-link" src={heart} alt="heart" /> }
             </div>
             <div className="profilebtn" onClick={() => showProfile(true)}>
                 { profile ?
@@ -75,7 +75,7 @@ const Header = () => {
                         <Profile />
                         <Backdrop  show={profile} set={showProfile} /> 
                     </div>
-                : <img className="account" src={account} alt="head-shot" /> }
+                : <img className="account header-link" src={account} alt="head-shot" /> }
             </div>
         </div>
     )
