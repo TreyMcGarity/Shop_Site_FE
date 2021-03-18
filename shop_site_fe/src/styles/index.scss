@@ -1,8 +1,9 @@
 
 body {
-    margin: auto
+    margin: auto;
+
+    @media (max-width: 800px) {
+    
+    }
 }
 
-@media (max-width: 800px) {
-    
-}

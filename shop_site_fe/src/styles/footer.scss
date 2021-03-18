@@ -1,5 +1,7 @@
 .footer {
-    height: 55px;
-    /* margin: -2%; */
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgb(250,240,230);
 }

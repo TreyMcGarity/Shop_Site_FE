@@ -4,21 +4,21 @@
     justify-content: center;
     top: 0;
     left: 0;
+    height: 2.5em;
     width: 100%;
-    padding: 5%;
     position: fixed;
     background-color: rgb(250,240,230);
-    border: 1px solid black;
     z-index: 10;
 }
 
 .searchBar input {
     width: 20em;
-    padding: .5em;
+    padding: .7em;
     border-radius: 5em;
 }
 
 .searchBar .x {
-    Width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
+    padding: .5em;
 }
