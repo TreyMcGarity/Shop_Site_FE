@@ -7,11 +7,11 @@ import Profile from './modals/Profile';
 import Cart from './modals/Cart';
 import SavedList from './modals/SavedList';
 import Backdrop from '../utils/backdrop';
-import menu from '../utils/images/hamburger-menu.png';
-import account from '../utils/images/profile-.png';
-import searchIcon from '../utils/images/search-icon.png';
-import cart from '../utils/images/cart-.png';
-import heart from '../utils/images/fav-heart.png';
+import menu from '../utils/images/header/hamburger-menu.png';
+import account from '../utils/images/header/profile-.png';
+import searchIcon from '../utils/images/header/search-icon.png';
+import cart from '../utils/images/header/cart-.png';
+import heart from '../utils/images/header/fav-heart.png';
 import '../styles/header.scss';
 
 const Header = () => {
