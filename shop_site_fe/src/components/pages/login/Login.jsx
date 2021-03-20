@@ -7,7 +7,7 @@ import '../../../styles/login/login.scss';
 
 const Login = (props) => {
 	// const dispatch = useDispatch();
-	const [input, setinput] = useState({ email: "", password: "" });
+	const [input, setinput] = useState({ username: "", password: "" });
 	const [hidden, setHidden] = useState(true);
 	const [source, setSource] = useState(Show);
 	const handleClick = () => {
@@ -34,11 +34,11 @@ const Login = (props) => {
                 </div>
                 <div className="form-container">
                     <form onSubmit={handleSubmit}>
-                        <label>Email</label>
+                        <label>Username</label>
                         <input
                             type="text"
-                            name="email"
-                            value={input.email}
+                            name="username"
+                            value={input.username}
                             onChange={handleChange}
                         />
                         <label>Password</label>
