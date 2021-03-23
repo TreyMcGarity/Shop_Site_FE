@@ -1,11 +1,10 @@
 .login {
-    height: 25em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 1.8rem;
 	background-color: #FAF0E6;
-	font-family: "DM Sans", sans-serif;
+	font-family: 'Damion', cursive;
 
 	.welcome-message {
 		width: 32%;
@@ -15,14 +14,14 @@
 			font-weight: 600;
 			margin-bottom: 2rem;
 			color: #365478;
-			font-family: Montserrat;
+			font-family: 'Tangerine', cursive;
 		}
 
 		p {
 			font-size: 1.8rem;
 			margin-bottom: 5rem;
 			color: rgba(113, 125, 139, 0.8);
-			font-family: DM Sans;
+			font-family: 'Damion', cursive;
 			font-style: normal;
 			font-weight: 500;
 			line-height: 29px;
@@ -90,6 +89,9 @@
 			height: 50px;
 			width: 100%;
 			border-radius: 25px;
+			color: white;
+			font-family: 'Tangerine', cursive;
+			font-size: 1em;
 			box-shadow: none;
 			background-color: #274160;
 		}

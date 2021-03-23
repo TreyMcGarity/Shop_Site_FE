@@ -1,13 +1,29 @@
 import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
 import Show from "../../../utils/images/login/show_password.png";
 import Hide from "../../../utils/images/login/hide_password.png";
 import { Link } from "react-router-dom";
-import '../../../styles/register/register.scss';
+import { useDispatch } from "react-redux";
+import { register } from '../../../redux/actions/authActions';
+import '../../../styles/pages/register/register.scss';
 
+    /*
+    data object:
+    username, password, confirm password
+    first and last name, email, phone, 
+    dob, gender, user_type */
 const Register = (props) => {
-	// const dispatch = useDispatch();
-	const [input, setinput] = useState({ username: "", password: "" });
+	const dispatch = useDispatch();
+	const [info, setInfo] = useState({ 
+        username: "", 
+        password: "",
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        dob: "",
+        gender: "",
+        user_type: "patron"
+    });
 	const [hidden, setHidden] = useState(true);
 	const [source, setSource] = useState(Show);
 	const handleClick = () => {
@@ -20,11 +36,11 @@ const Register = (props) => {
 		}
 	};
 	const handleChange = (e) => {
-		setinput({ ...input, [e.target.name]: e.target.value });
+		setInfo({ ...info, [e.target.name]: e.target.value });
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// dispatch(getLogi(input));
+		dispatch(register(info));
 	};
 	return (
             <div className="register">
@@ -38,7 +54,7 @@ const Register = (props) => {
                         <input
                             type="text"
                             name="username"
-                            value={input.username}
+                            value={info.username}
                             onChange={handleChange}
                         />
                         <label>Password</label>
@@ -46,7 +62,7 @@ const Register = (props) => {
                             <input
                                 type={hidden ? "password" : "text"}
                                 name="password"
-                                value={input.password}
+                                value={info.password}
                                 onChange={handleChange}
                             />
                             <img
@@ -56,6 +72,49 @@ const Register = (props) => {
                                 alt="eye"
                             />
                         </div>
+                        <label>Personal Information</label>
+                        <input
+                            type="text"
+                            name="first_name"
+                            placeholder="First Name"
+                            value={info.first_name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="last_name"
+                            placeholder="Last Name"
+                            value={info.last_name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="Email"
+                            value={info.email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="phone"
+                            placeholder="Phone Number"
+                            value={info.phone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="dob"
+                            placeholder="Date of Birth"
+                            value={info.dob}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="gender"
+                            placeholder="Gender"
+                            value={info.gender}
+                            onChange={handleChange}
+                        />
                         <button type="submit">Log in</button>
                     </form>
                     <p className="top signup-forgot">

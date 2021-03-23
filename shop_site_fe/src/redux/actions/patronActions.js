@@ -7,15 +7,15 @@ import {
 } from '../actions/type';
 
 /*
-export default get = (data) => (dispatch) => {
+export const get = (data) => (dispatch) => {
 }
 
-export default add = (data) => (dispatch) => {
+export const add = (data) => (dispatch) => {
 }
 
-export default update = (data) => (dispatch) => {
+export const update = (data) => (dispatch) => {
 }
 
-export default delete = (data) => (dispatch) => {
+export const delete = (data) => (dispatch) => {
 }
 */

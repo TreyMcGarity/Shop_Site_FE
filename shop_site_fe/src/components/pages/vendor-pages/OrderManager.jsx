@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../styles/orderManager.scss';
+import '../../../styles/pages/orderManager.scss';
 
 const OrderManager = () => {
     return (

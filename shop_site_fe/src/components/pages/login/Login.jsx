@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Show from "../../../utils/images/login/show_password.png";
 import Hide from "../../../utils/images/login/hide_password.png";
 import { Link } from "react-router-dom";
-import '../../../styles/login/login.scss';
+import '../../../styles/pages/login/login.scss';
 
 const Login = (props) => {
 	// const dispatch = useDispatch();

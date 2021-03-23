@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/saved.scss';
+import '../../styles/modals/saved.scss';
 
 const SavedList = () => {
     return (

@@ -8,19 +8,16 @@ import {
 } from '../actions/type';
 
 /*
-export default getAll = (data) => (dispatch) => {
+export const getAll = (data) => (dispatch) => {
 }
 
-export default get = (data) => (dispatch) => {
+export const get = (data) => (dispatch) => {
 }
 
-export default getAllP = (data) => (dispatch) => {
+export const add = (data) => (dispatch) => {
 }
 
-export default add = (data) => (dispatch) => {
-}
-
-export default update = (data) => (dispatch) => {
+export const update = (data) => (dispatch) => {
 }
 
 export default delete = (data) => (dispatch) => {

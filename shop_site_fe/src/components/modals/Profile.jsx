@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/profile.scss';
+import '../../styles/modals/profile.scss';
 
 const Profile = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Searcher from '../../utils/images/header/search-icon-other.png'
 import X from '../../utils/images/header/X.png';
-import '../../styles/search.scss';
+import '../../styles/modals/search.scss';
 
 const Search = props => {
     return (
