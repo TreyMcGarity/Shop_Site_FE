@@ -26,4 +26,19 @@ export const register = (data) => (dispatch) => {
 };
 
 export const login = (data) => (dispatch) => {
+    return apiCall()
+    .post(`${process.env.REACT_APP_BACKEND}/auth/login?user_type=${data.user_type}`, data)
+    .then((res) => {
+        dispatch({
+            type: LOGIN_SUCCESS,
+            payload: res.data
+        })
+        return res;
+    })
+    .catch((err) => {
+        dispatch({
+            type: LOGIN_FAILURE,
+            payload: err.response
+        })
+    })
 }
