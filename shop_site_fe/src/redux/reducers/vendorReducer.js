@@ -8,6 +8,7 @@ import {
 } from '../actions/type';
 
 const initialState = {
+    vendor_data: {},
 }
 
 const productReducer = (state = initialState, action) => {
@@ -15,6 +16,7 @@ const productReducer = (state = initialState, action) => {
         case GET_VENDORS_PROFILES:
             return {
                 ...state,
+                vendor_data: action.payload
             };
         case GET_VENDOR_PROFILE:
             return {
@@ -27,6 +29,7 @@ const productReducer = (state = initialState, action) => {
         case ADD_VENDOR_PROFILE:
             return {
                 ...state,
+                vendor_data: action.payload
             };    
         case UPDATE_VENDOR_PROFILE:
             return {

@@ -7,7 +7,7 @@ import {
 } from '../actions/type';
 
 const initialState = {
-
+    patron_data: {},
 }
 
 const productReducer = (state = initialState, action) => {
@@ -15,10 +15,12 @@ const productReducer = (state = initialState, action) => {
         case GET_PATRON_PROFILE:
             return {
                 ...state,
+                patron_data: action.payload
             };
         case ADD_PATRON_PROFILE:
             return {
                 ...state,
+                patron_data: action.payload
             };  
         case UPDATE_PATRON_PROFILE:
             return {
@@ -28,7 +30,6 @@ const productReducer = (state = initialState, action) => {
             return {
                 ...state,
             };    
-    
         default:
             return state;
     }

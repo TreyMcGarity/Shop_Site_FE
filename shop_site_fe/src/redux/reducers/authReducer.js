@@ -7,8 +7,8 @@ import {
 
 const initialState = {
     loggedIn: false,
-    isFetching: false,
-    info_data: {}
+    cred_data: {},
+    error: ""
 }
 
 const authReducer = (state = initialState, action) => {
@@ -16,30 +16,26 @@ const authReducer = (state = initialState, action) => {
         case REGISTER_SUCCESS:
             return {
                 ...state,
-                isFetching: false,
                 loggedIn: true,
-                data : action.payload,
+                cred_data: action.payload,
             };
         case REGISTER_FAILURE:
             return {
                 ...state,
-                isFetching: false,
-                loggedIn: true,
-                data : action.payload,
+                loggedIn: false,
+                error: action.payload,
             };  
         case LOGIN_SUCCESS:
             return {
                 ...state,
-                isFetching: false,
                 loggedIn: true,
-                data : action.payload,
+                cred_data: action.payload,
             };
         case LOGIN_FAILURE:
             return {
                 ...state,
-                isFetching: false,
-                loggedIn: true,
-                data : action.payload,
+                loggedIn: false,
+                error: action.payload,
             };           
         default:
             return state;

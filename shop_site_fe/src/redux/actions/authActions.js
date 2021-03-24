@@ -29,6 +29,8 @@ export const login = (data) => (dispatch) => {
     return apiCall()
     .post(`${process.env.REACT_APP_BACKEND}/auth/login?user_type=${data.user_type}`, data)
     .then((res) => {
+        if (data.user_type === 'patron') { window.location = '/home' } 
+        if (data.user_type === 'vendor') { window.location = '/dashboard' }
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
