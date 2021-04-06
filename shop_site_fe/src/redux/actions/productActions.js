@@ -1,18 +1,24 @@
 import axios from 'axios';
 import {
-    GET_PRODUCTS_SUCCCESS,
+    GET_PRODUCTS_SUCCESS,
     GET_PRODUCTS_FAILURE,
-    GET_PRODUCT_SUCCCESS,
+    GET_PRODUCT_SUCCESS,
     GET_PRODUCT_FAILURE,
+    ADD_PRODUCT_SUCCESS,
+    ADD_PRODUCT_FAILURE,
+    UPDATE_PRODUCT_SUCCESS,
+    UPDATE_PRODUCT_FAILURE,
+    DELETE_PRODUCT_SUCCESS,
+    DELETE_PRODUCT_FAILURE
 } from '../actions/type';
 
 
 export const getProducts = () => (dispatch) => {
     axios
-    .get(`/client/me`)
+    .get(`${process.env.REACT_APP_BACKEND}/api/products`)
     .then((res) => {
         dispatch({
-            type: GET_PRODUCTS_SUCCCESS,
+            type: GET_PRODUCTS_SUCCESS,
             payload: res.data,
         });
     })
@@ -24,12 +30,12 @@ export const getProducts = () => (dispatch) => {
     });
 };
 
-export const getProduct = () => (dispatch) => {
+export const getProduct = (id) => (dispatch) => {
     axios
-    .get(`/client/me`)
+    .get(`${process.env.REACT_APP_BACKEND}/api/products/${id}`)
     .then((res) => {
         dispatch({
-            type: GET_PRODUCT_SUCCCESS,
+            type: GET_PRODUCT_SUCCESS,
             payload: res.data,
         });
     })
@@ -41,13 +47,54 @@ export const getProduct = () => (dispatch) => {
     });
 };
 
-/*
-export default add = (data) => (dispatch) => {
-}
 
-export default update = (data) => (dispatch) => {
-}
+export const addProduct = (data) => (dispatch) => {
+    axios
+    .get(`${process.env.REACT_APP_BACKEND}/api/products`, data)
+    .then((res) => {
+        dispatch({
+            type: ADD_PRODUCT_SUCCESS,
+            payload: res.data,
+        });
+    })
+    .catch((err) => {
+        dispatch({
+            type: ADD_PRODUCT_FAILURE,
+            payload: err.message,
+        });
+    });
+};
 
-export default delete = (data) => (dispatch) => {
-}
-*/
+export const updateProduct = (id, updatedData) => (dispatch) => {
+    axios
+    .get(`${process.env.REACT_APP_BACKEND}/api/products/${id}`, updatedData)
+    .then((res) => {
+        dispatch({
+            type: UPDATE_PRODUCT_SUCCESS,
+            payload: res.updatedData,
+        });
+    })
+    .catch((err) => {
+        dispatch({
+            type: UPDATE_PRODUCT_FAILURE,
+            payload: err.message,
+        });
+    });
+};
+
+export const deleteProduct = (id) => (dispatch) => {
+    axios
+    .get(`${process.env.REACT_APP_BACKEND}/api/products/${id}`)
+    .then((res) => {
+        dispatch({
+            type: DELETE_PRODUCT_SUCCESS,
+            payload: res.data,
+        });
+    })
+    .catch((err) => {
+        dispatch({
+            type: DELETE_PRODUCT_FAILURE,
+            payload: err.message,
+        });
+    });
+};
