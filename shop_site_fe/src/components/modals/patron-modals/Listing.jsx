@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/modals/listing.scss';
+import '../../../styles/modals/patron-modals/listing.scss';
 
 const Listing = () => {
     return (

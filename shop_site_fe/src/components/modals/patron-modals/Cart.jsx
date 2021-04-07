@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/modals/cart.scss';
+import '../../../styles/modals/patron-modals/cart.scss';
 
 const Cart = () => {
     return (
