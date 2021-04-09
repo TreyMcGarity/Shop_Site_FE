@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { useDispatch } from "react-redux";
 // import { addProduct } from '../../../redux/actions/productActions';
+import '../../../styles/modals/vendor-modals/productForm.scss';
 
 const ProductForm = () => {
 	// const dispatch = useDispatch();
@@ -21,18 +22,20 @@ const ProductForm = () => {
 		// dispatch(addProduct(product));
 	};
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Name</label>
+        <div className="product-form">
+            Create a Product
+            <form onSubmit={handleSubmit}>
+                <label>Name</label>
                 <input
                     type="text"
                     name="name"
                     value={product.name}
-                   onChange={handleChange}
+                onChange={handleChange}
                 />
                 <label>Type</label>
                 <input
                     type="text"
-                    name="type"
+                    name="product_type"
                     value={product.product_type}
                     onChange={handleChange}
                 />
@@ -43,6 +46,7 @@ const ProductForm = () => {
                     value={product.details}
                     onChange={handleChange}
                 />
+                <label>Cost</label>
                 <input
                     type="number"
                     name="cost"
@@ -56,14 +60,16 @@ const ProductForm = () => {
                     value={product.stock}
                     onChange={handleChange}
                 />
+                <label>Image Url</label>
                 <input
                     type="url"
                     name="product_pic_url"
                     value={product.product_pic_url}
                     onChange={handleChange}
                 />
-            <button type="submit">Log in</button>
-        </form>
+                <button type="submit">Create!</button>
+            </form>
+        </div>
     )
 }
 
