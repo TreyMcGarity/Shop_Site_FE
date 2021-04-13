@@ -4,7 +4,9 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Home from './pages/patron-pages/Home';
 import Dashboard from './pages/vendor-pages/Dashboard';
+import ProductManager from './pages/vendor-pages/ProductManager';
 import OrderManager from './pages/vendor-pages/OrderManager';
+import UserManager from './pages/vendor-pages/UserManager';
 import { Route } from "react-router-dom";
 // import PrivateRoute from '../utils/PrivateRoute';
 import '../styles/router.scss';
@@ -40,10 +42,19 @@ function Routing() {
         />
 
         <Route 
+            path="/product-manager"
+            render={props => <ProductManager {...props} />}
+        />
+
+        <Route 
             path="/order-manager"
             render={props => <OrderManager {...props} />}
         />
         
+        <Route 
+            path="/user-manager"
+            render={props => <UserManager {...props} />}
+        />
     </Router> 
   );
 }
