@@ -14,8 +14,9 @@ import {
 
 
 export const getProducts = () => (dispatch) => {
+    console.log(`backend: ${process.env.REACT_APP_BACKEND}`)
     axios
-    .get(`${process.env.REACT_APP_BACKEND}/api/products`)
+    .get(`${process.env.REACT_APP_BACKEND}/products`)
     .then((res) => {
         dispatch({
             type: GET_PRODUCTS_SUCCESS,
@@ -32,7 +33,7 @@ export const getProducts = () => (dispatch) => {
 
 export const getProduct = (id) => (dispatch) => {
     axios
-    .get(`${process.env.REACT_APP_BACKEND}/api/products/${id}`)
+    .get(`${process.env.REACT_APP_BACKEND}/products/${id}`)
     .then((res) => {
         dispatch({
             type: GET_PRODUCT_SUCCESS,
@@ -50,7 +51,7 @@ export const getProduct = (id) => (dispatch) => {
 
 export const addProduct = (data) => (dispatch) => {
     axios
-    .get(`${process.env.REACT_APP_BACKEND}/api/products`, data)
+    .get(`${process.env.REACT_APP_BACKEND}/products`, data)
     .then((res) => {
         dispatch({
             type: ADD_PRODUCT_SUCCESS,
@@ -67,7 +68,7 @@ export const addProduct = (data) => (dispatch) => {
 
 export const updateProduct = (id, updatedData) => (dispatch) => {
     axios
-    .get(`${process.env.REACT_APP_BACKEND}/api/products/${id}`, updatedData)
+    .get(`${process.env.REACT_APP_BACKEND}/products/${id}`, updatedData)
     .then((res) => {
         dispatch({
             type: UPDATE_PRODUCT_SUCCESS,
@@ -84,7 +85,7 @@ export const updateProduct = (id, updatedData) => (dispatch) => {
 
 export const deleteProduct = (id) => (dispatch) => {
     axios
-    .get(`${process.env.REACT_APP_BACKEND}/api/products/${id}`)
+    .get(`${process.env.REACT_APP_BACKEND}/products/${id}`)
     .then((res) => {
         dispatch({
             type: DELETE_PRODUCT_SUCCESS,

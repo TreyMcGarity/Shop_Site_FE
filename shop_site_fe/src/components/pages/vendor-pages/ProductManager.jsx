@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect, useDispatch } from "react-redux";
+import { getProducts, getProduct } from '../../../redux/actions/productActions';
 import ProductForm from '../../modals/vendor-modals/ProductForm';
 import Backdrop from '../../../utils/backdrop';
 import '../../../styles/pages/vendor-pages/productManager.scss';
 
-const ProductManager = () => {
+const ProductManager = (props) => {
+    console.log(props)
     const [creating, isCreating] = useState(false)
-    //useEffect to grab updated list of products
+    const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getProducts());
+	}, []);
 
     return (
     <div className='product-manager-page'>
@@ -22,4 +29,10 @@ const ProductManager = () => {
     )
 }
 
-export default ProductManager;
+const mapping = (state) => {
+    return {
+
+    }
+}
+
+export default connect(mapping)(ProductManager);

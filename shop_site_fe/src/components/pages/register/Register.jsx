@@ -116,7 +116,7 @@ const Register = () => {
                             value={info.gender}
                             onChange={handleChange}
                         />
-                        <button type="submit">Log in</button>
+                        <button type="submit">Register</button>
                     </form>
                     <p className="top signup-forgot">
                         Already have an account?

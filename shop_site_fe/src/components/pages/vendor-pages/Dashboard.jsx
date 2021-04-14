@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import '../../../styles/pages/vendor-pages/dashboard.scss';
 
 const Dashboard = () => {
-    
     return (
         <div className='dashboard'>
             <h1>Admin Dashboard</h1>

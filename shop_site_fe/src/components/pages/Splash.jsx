@@ -10,8 +10,8 @@ const Splash = () => {
             <h2>Logo</h2>
             <h2>Slogan</h2>
             <p> Redirect to <Link to='/home'>Homepage</Link></p>
-            <Link classname='login-btn' to='/login'>Login</Link>
-            <p>Don't have an account? <Link classname='register-btn' to='register'>Create account</Link></p>
+            <Link className='login-btn' to='/login'>Login</Link>
+            <p>Don't have an account? <Link className='register-btn' to='register'>Create account</Link></p>
         </div>
     )
 }
