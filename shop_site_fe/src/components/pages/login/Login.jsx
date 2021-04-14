@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
-import Show from "../../../utils/images/login/show_password.png";
-import Hide from "../../../utils/images/login/hide_password.png";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { login } from '../../../redux/actions/authActions';
+
+import Show from '../../../utils/images/login/show_password.png';
+import Hide from '../../../utils/images/login/hide_password.png';
 import '../../../styles/pages/login/login.scss';
 
-const Login = (props) => {
-	// const dispatch = useDispatch();
+const Login = () => {
+	const dispatch = useDispatch();
 	const [input, setinput] = useState({ username: "", password: "" });
 	const [hidden, setHidden] = useState(true);
 	const [source, setSource] = useState(Show);
@@ -24,7 +26,7 @@ const Login = (props) => {
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// dispatch(getLogi(input));
+		dispatch(login(input));
 	};
 	return (
             <div className="login">

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { register } from '../../../redux/actions/authActions';
+
 import Show from "../../../utils/images/login/show_password.png";
 import Hide from "../../../utils/images/login/hide_password.png";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { register } from '../../../redux/actions/authActions';
 import '../../../styles/pages/register/register.scss';
 
     /*
@@ -11,7 +12,7 @@ import '../../../styles/pages/register/register.scss';
     username, password, confirm password
     first and last name, email, phone, 
     dob, gender, user_type */
-const Register = (props) => {
+const Register = () => {
 	const dispatch = useDispatch();
 	const [info, setInfo] = useState({ 
         username: "", 
@@ -46,7 +47,7 @@ const Register = (props) => {
             <div className="register">
                 <div className="welcome-message">
                     <h1>Register</h1>
-                    <p>Welcome back! Please register a new account.</p>
+                    <p>Please register a new account.</p>
                 </div>
                 <div className="form-container">
                     <form onSubmit={handleSubmit}>

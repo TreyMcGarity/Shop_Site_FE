@@ -6,11 +6,23 @@ const Dashboard = () => {
     
     return (
         <div className='dashboard'>
-            Dashboard
+            <h1>Admin Dashboard</h1>
             <div className='dash-menu'>
-                <Link className='btn product-btn' to='product-manager'>Product Manager</Link>
-                <Link className='btn order-btn' to='order-manager'>Order Manager</Link>
-                <Link className='btn user-btn' to='user-manager'>User Manager</Link>
+                <Link 
+                    className='btn product-btn' 
+                    to='product-manager'>
+                        Product Manager
+                </Link>
+                <Link 
+                    className='btn order-btn' 
+                    to='order-manager'>
+                        Order Manager
+                </Link>
+                <Link 
+                    className='btn user-btn' 
+                    to='user-manager'>
+                        User Manager
+                </Link>
             </div>
         </div>
     )
