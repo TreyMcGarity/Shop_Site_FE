@@ -14,7 +14,6 @@ import {
 
 
 export const getProducts = () => (dispatch) => {
-    console.log(`backend: ${process.env.REACT_APP_BACKEND}`)
     axios
     .get(`${process.env.REACT_APP_BACKEND}/products`)
     .then((res) => {

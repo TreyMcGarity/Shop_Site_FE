@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { connect, useDispatch } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import { getProducts, getProduct } from '../../../redux/actions/productActions';
 import ProductForm from '../../modals/vendor-modals/ProductForm';
 import Backdrop from '../../../utils/backdrop';
 import '../../../styles/pages/vendor-pages/productManager.scss';
 
 const ProductManager = (props) => {
-    console.log(props)
-    const [creating, isCreating] = useState(false)
+    const [creating, isCreating] = useState(false);
+    const state = useSelector((state) => state.product);
     const dispatch = useDispatch();
-
+    console.log(state)
 	useEffect(() => {
 		dispatch(getProducts());
 	}, []);
@@ -31,7 +31,8 @@ const ProductManager = (props) => {
 
 const mapping = (state) => {
     return {
-
+        product: state,
+        product_list: state.product.product_list
     }
 }
 
