@@ -1,8 +1,12 @@
 import React from 'react';
+import { connect, useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import '../../../styles/pages/vendor-pages/dashboard.scss';
 
 const Dashboard = () => {
+    const dispatch = useDispatch();
+    const state = useSelector((state) => state);
+    
     return (
         <div className='dashboard'>
             <h1>Admin Dashboard</h1>
@@ -27,4 +31,10 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+const mapping = (state) => {
+    return {
+        state: state,
+    }
+}
+
+export default connect(mapping)(Dashboard);

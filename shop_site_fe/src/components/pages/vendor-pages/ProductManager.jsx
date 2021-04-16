@@ -7,9 +7,10 @@ import '../../../styles/pages/vendor-pages/productManager.scss';
 
 const ProductManager = (props) => {
     const [creating, isCreating] = useState(false);
-    const state = useSelector((state) => state.product);
     const dispatch = useDispatch();
+    const state = useSelector((state) => state.product);
     console.log(state)
+    
 	useEffect(() => {
 		dispatch(getProducts());
 	}, []);
