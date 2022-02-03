@@ -20,9 +20,10 @@ const productReducer = (state = initialState, action) => {
 	switch (action.type) {
         //RETRIEVE METHODS
         case GET_PRODUCTS_SUCCESS:
+            console.log("GET_PRODUCTS_SUCCESS state:", state)
             return {
                 ...state,
-                product_list: [...action.payload]
+                product_data: {...action.payload}
             };
         case GET_PRODUCTS_FAILURE:
             return {
