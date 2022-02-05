@@ -11,6 +11,7 @@ export const register = (data) => (dispatch) => {
     return apiCall()
         .post(`${process.env.REACT_APP_BACKEND}/auth/register?user_type=${data.user_type}`, data)
         .then((res) => {
+            console.log(res.data)
             dispatch({
                 type: REGISTER_SUCCESS,
                 payload: res.data

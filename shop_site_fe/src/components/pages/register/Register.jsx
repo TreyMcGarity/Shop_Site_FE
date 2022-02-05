@@ -73,7 +73,7 @@ const Register = () => {
                                 alt="eye"
                             />
                         </div>
-                        <label>Personal Information</label>
+                        <label>Optional Information:</label>
                         <input
                             type="text"
                             name="first_name"

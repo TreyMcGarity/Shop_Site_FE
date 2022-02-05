@@ -14,7 +14,7 @@ const Home = () => {
         <>
         <Header />
         <div className='home'>
-            Home
+            Home: Page
         </div>
         <Footer />
         </>
