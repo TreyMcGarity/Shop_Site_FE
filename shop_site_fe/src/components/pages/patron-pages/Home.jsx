@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../Header';
-import Footer from '../../Footer';
+import Header from '../segments/Header';
+import Footer from '../segments/Footer';
 import { connect, useDispatch, useSelector } from "react-redux";
 import { getProducts } from '../../../redux/actions/productActions'
 import { Link } from "react-router-dom";

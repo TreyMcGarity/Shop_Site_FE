@@ -1,7 +1,9 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import Splash from './pages/Splash';
-import Login from './pages/login/Login';
-import Register from './pages/register/Register';
+import LoginPatron from './pages/login/LoginPatron';
+import LoginVendor from './pages/login/LoginVendor';
+import RegisterPatron from './pages/register/RegisterPatron';
+import RegisterVendor from './pages/register/RegisterVendor';
 import Home from './pages/patron-pages/Home';
 import Dashboard from './pages/vendor-pages/Dashboard';
 import ProductManager from './pages/vendor-pages/ProductManager';
@@ -22,12 +24,20 @@ function Routing() {
         {/*  Auth  Routes */}
         <Route 
             path="/login"
-            render={props => <Login {...props} />}
+            render={props => <LoginPatron {...props} />}
+        />
+        <Route 
+            path="/gate"
+            render={props => <LoginVendor {...props} />}
         />
             
         <Route 
             path="/register"
-            render={props => <Register {...props} />}
+            render={props => <RegisterPatron {...props} />}
+        />
+        <Route 
+            path="/craft"
+            render={props => <RegisterVendor {...props} />}
         />
 
         {/* Page Routes (need to be private when auth working) */}

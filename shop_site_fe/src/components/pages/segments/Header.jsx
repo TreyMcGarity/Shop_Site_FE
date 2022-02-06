@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 // import { useDispatch } from "react-redux";
 // import { getProduct } from '../redux/actions/productActions';
-import Listing from './modals/patron-modals/Listing';
-import Search from './modals/patron-modals/Search';
-import Profile from './modals/patron-modals/Profile';
-import Cart from './modals/patron-modals/Cart';
-import SavedList from './modals/patron-modals/SavedList';
-import Backdrop from '../utils/backdrop';
-import menu from '../utils/images/header/hamburger-menu.png';
-import account from '../utils/images/header/profile-.png';
-import searchIcon from '../utils/images/header/search-icon.png';
-import cart from '../utils/images/header/cart-.png';
-import heart from '../utils/images/header/fav-heart.png';
-import '../styles/header.scss';
+import Listing from '../../modals/patron-modals/Listing';
+import Search from '../../modals/patron-modals/Search';
+import Profile from '../../modals/patron-modals/Profile';
+import Cart from '../../modals/patron-modals/Cart';
+import SavedList from '../../modals/patron-modals/SavedList';
+import Backdrop from '../../../utils/backdrop';
+import menu from '../../../utils/images/header/hamburger-menu.png';
+import account from '../../../utils/images/header/profile-.png';
+import searchIcon from '../../../utils/images/header/search-icon.png';
+import cart from '../../../utils/images/header/cart-.png';
+import heart from '../../../utils/images/header/fav-heart.png';
+import '../../../styles/pages/segemnts/header.scss';
 
 const Header = () => {
     // const dispatch = useDispatch();
