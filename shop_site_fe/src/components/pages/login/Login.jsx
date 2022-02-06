@@ -9,7 +9,7 @@ import '../../../styles/pages/login/login.scss';
 
 const Login = () => {
 	const dispatch = useDispatch();
-	const [input, setinput] = useState({ username: "", password: "" });
+	const [input, setinput] = useState({ username: "", password: "", user_type: "patron" });
 	const [hidden, setHidden] = useState(true);
 	const [source, setSource] = useState(Show);
 	const handleClick = () => {

@@ -20,8 +20,8 @@ const Register = () => {
         first_name: "",
         last_name: "",
         email: "",
-        phone: "",
-        dob: "",
+        phone: null,
+        dob: null,
         gender: "",
         user_type: "patron"
     });
@@ -96,7 +96,7 @@ const Register = () => {
                             onChange={handleChange}
                         />
                         <input
-                            type="text"
+                            type="date"
                             name="phone"
                             placeholder="Phone Number"
                             value={info.phone}
