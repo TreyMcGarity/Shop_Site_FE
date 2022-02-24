@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../../../styles/pages/auth-register.scss';
 
 const RegisterForm = (props) => {
     return (
@@ -55,14 +56,14 @@ const RegisterForm = (props) => {
                     onChange={props.handleChange}
                 />
                 <input
-                    type="date"
+                    type="int"
                     name="phone"
                     placeholder="Phone Number"
                     value={props.input.phone}
                     onChange={props.handleChange}
                 />
                 <input
-                    type="text"
+                    type="date"
                     name="dob"
                     placeholder="Date of Birth"
                     value={props.input.dob}

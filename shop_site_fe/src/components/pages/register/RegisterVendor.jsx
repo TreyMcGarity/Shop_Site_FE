@@ -4,7 +4,6 @@ import { register } from '../../../redux/actions/authActions';
 import RegisterForm from './RegisterForm';
 import Show from "../../../utils/images/login/show_password.png";
 import Hide from "../../../utils/images/login/hide_password.png";
-import '../../../styles/pages/register/register.scss';
 
 const Register = () => {
 	const dispatch = useDispatch();

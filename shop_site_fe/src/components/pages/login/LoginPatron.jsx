@@ -4,7 +4,6 @@ import { login } from '../../../redux/actions/authActions';
 import LoginForm from './LoginForm';
 import Show from '../../../utils/images/login/show_password.png';
 import Hide from '../../../utils/images/login/hide_password.png';
-import '../../../styles/pages/login/login.scss';
 
 const Login = () => {
 	const dispatch = useDispatch();

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../../../styles/pages/auth-login.scss';
 
 const LoginForm = (props) => {
     return (
