@@ -4,7 +4,7 @@ import '../../../styles/pages/auth-register.scss';
 
 const RegisterForm = (props) => {
     return (
-        <div className="register">
+    <div className="register">
         <div className="welcome-message">
             <h1>Register</h1>
             <p>Please register a new account.</p>

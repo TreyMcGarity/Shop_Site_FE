@@ -4,7 +4,7 @@ import '../../../styles/pages/auth-login.scss';
 
 const LoginForm = (props) => {
     return (
-        <div className="login">
+    <div className="login">
         <div className="welcome-message">
             <h1>Login</h1>
             <p>Welcome back! Please login to your account.</p>
