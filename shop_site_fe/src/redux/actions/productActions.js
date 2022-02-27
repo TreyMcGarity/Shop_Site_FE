@@ -17,7 +17,6 @@ export const getProducts = () => (dispatch) => {
     axios
     .get(`${process.env.REACT_APP_BACKEND}/products`)
     .then((res) => {
-        console.log("Data:", res.data)
         dispatch({
             type: GET_PRODUCTS_SUCCESS,
             payload: res.data,

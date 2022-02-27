@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import Header from '../segments/Header';
 import Footer from '../segments/Footer';
-import { connect, useDispatch, useSelector } from "react-redux";
+import Product from '../segments/Product';
+import { connect, useDispatch } from "react-redux";
 import { getProducts } from '../../../redux/actions/productActions'
-import { Link } from "react-router-dom";
 import '../../../styles/pages/home.scss';
 
-const Home = () => {
+const Home = (props) => {
     const dispatch = useDispatch();
-    const state = useSelector((state) => state);
 
+    useEffect(() => {
+		dispatch(getProducts())
+	}, []);
+
+    console.log("products:",props.products.product_data)
     return (
         <>
         <Header />
         <div className='home'>
-            Home: Page
+            {props.products.product_data ? props.products.product_data.map((p, i) => {
+                return <Product key={i} product={p} />
+            }) : <p>No products</p>}
         </div>
         <Footer />
         </>
@@ -23,7 +29,7 @@ const Home = () => {
 
 const mapping = (state) => {
     return {
-        state: state,
+        products: state.product,
     }
 }
 
