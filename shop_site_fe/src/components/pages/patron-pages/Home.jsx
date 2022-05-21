@@ -18,9 +18,11 @@ const Home = (props) => {
         <>
         <Header />
         <div className='home'>
-            {props.products.product_data ? props.products.product_data.map((p, i) => {
-                return <Product key={i} product={p} />
-            }) : <p>No products</p>}
+            <div className="products">
+                {props.products.product_data ? props.products.product_data.map((p, i) => {
+                    return <Product key={i} product={p} />
+                }) : <p>No products</p>}
+            </div>
         </div>
         <Footer />
         </>

@@ -20,7 +20,6 @@ const Login = () => {
 		}
 	};
 	const handleChange = (e) => {
-        console.log(e.target.value)
 		setinput({ ...input, [e.target.name]: e.target.value });
 	};
 	const handleSubmit = (e) => {

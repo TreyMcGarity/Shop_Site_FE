@@ -5,6 +5,10 @@ Green: B3E6CC
 
 .home {
     height: 50em;
-    background-color: slategray;
+    background-color: whitesmoke;
     background-size: cover;
+
+    .products {
+        display: flex;
+    }
 }

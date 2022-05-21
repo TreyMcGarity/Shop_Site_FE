@@ -1,12 +1,19 @@
 import React from "react";
+import '../../../styles/pages/segemnts/product.scss';
 
-const GoalCard = (props) => {
+const Product = (props) => {
     
     return (
-        <div>
-         <p>{props.product.name}</p>
+        <div className="product">
+         <h1>{props.product.name}</h1>
+         {/* <img src={props.product.product_pic_id} alt={#}*/}
+         <div>
+            <p>details: {props.product.details}</p>
+            <p>cost: {props.product.cost}</p>
+            <p>price: {props.product.stock}</p>
+         </div>
         </div>
     )
 }
 
-export default GoalCard;
+export default Product;
