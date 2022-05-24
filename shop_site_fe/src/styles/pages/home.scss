@@ -1,14 +1,44 @@
 /* 
-Biege: FAF0E6
-Green: B3E6CC
+Biege: #FAF0E6
+Green: #B3E6CC
+Blue: #748FBF;
 */
 
 .home {
-    height: 50em;
-    background-color: whitesmoke;
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
 
+
+    .promo {
+        background-color: #B3E6CC; //light green
+        margin: 2em;
+        // width: 70%;
+        // background-color: #87EA9D; //green
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+        padding: 2em 0;
+
+        .option {
+            padding: 1em;
+            margin: .5em;
+            background-color: #748FBF;
+            border: .1 solid black;
+            border-radius: 50%;
+        }
+    }
+
+    .model {
+        img {
+            width: 70%;
+        }
+    }
+    
     .products {
         display: flex;
+        flex-direction: column;
     }
+
 }
