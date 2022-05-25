@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from '../segments/Header';
 import Footer from '../segments/Footer';
 import Product from '../segments/Product';
+import Carousel from '../../modals/carousel/Carousel';
 import { connect, useDispatch } from "react-redux";
 import { getProducts } from '../../../redux/actions/productActions';
 import Group from '../../../utils/images/home/group_setting.jpg';
@@ -25,12 +26,7 @@ const Home = (props) => {
                 <p>Must have an account to access incredible deal offer!</p>
             </div>
             <img src={Group} alt="group setting"/>
-            <div className="options">
-                <p className='option'>Arrivals</p>
-                <p className='option'>Popular</p>
-                <p className='option'>Women</p>
-                <p className='option'>Men</p>
-            </div>
+            <Carousel />
             <div className='model'>
                 <img src={Model1} alt='model with peace sign'/>
             </div>
