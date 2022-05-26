@@ -10,6 +10,8 @@ Burgandy: #900C3F
 .home {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
     .promo {
         background-color: #B3E6CC; //light green
@@ -30,6 +32,10 @@ Burgandy: #900C3F
             border: .1 solid black;
             border-radius: 50%;
         }
+    }
+
+    .carousel {
+        margin: 3em 0;
     }
 
     .model {
