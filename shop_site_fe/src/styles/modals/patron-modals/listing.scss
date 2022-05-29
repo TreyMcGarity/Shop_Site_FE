@@ -1,4 +1,5 @@
 .listing {
+    padding-top: 2.5em;
     width: 75%;
     height: 100%;
     display: flex;
@@ -6,7 +7,25 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(250,240,230);
-    border: 1px solid black;
+    background-color: #FBFBFB;
+    border-right: .1em solid black;
     z-index: 10;
+
+        .options {
+            padding: 0 1em;
+        }
+
+        .suggestion-contact {
+            margin-top: 5em;
+            height: 100%;
+            padding: 1em;
+            border-top: .1em solid black;
+            background-color: #CBCBCB;
+
+            p {
+                padding: 1em;
+            }
+        }
+
+
 }

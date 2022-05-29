@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 // import { getProduct } from '../redux/actions/productActions';
 import Listing from '../../modals/patron-modals/Listing';
 import Search from '../../modals/patron-modals/Search';
-import Profile from '../../modals/patron-modals/Profile';
-import Cart from '../../modals/patron-modals/Cart';
-import SavedList from '../../modals/patron-modals/SavedList';
 import Backdrop from '../../../utils/backdrop';
 import menu from '../../../utils/images/header/hamburger-menu.png';
 import account from '../../../utils/images/header/profile-.png';
@@ -19,9 +16,6 @@ const Header = () => {
     const [listing, showListing] = useState(false);
     const [searching, showSearching] = useState(false);
     const [search, setSearch] = useState("");
-    const [carting, showCarting] = useState(false);
-    const [savedList, showSavedList] = useState(false);
-    const [profile, showProfile] = useState(false);
 	const handleChange = (e) => {
 		setSearch({ ...search, [e.target.name]: e.target.value });
 	};
@@ -39,7 +33,7 @@ const Header = () => {
                     </div>
                 : <img className="menu header-link" src={menu} alt="menu" /> }
             </div>
-            <h1>DECOREM</h1>
+            <h1 className='title'>DECOREM</h1>
             <div className="searchbtn" onClick={() => showSearching(true)}>
                 { searching ?
                     <div>
@@ -53,30 +47,9 @@ const Header = () => {
                     </div>
                 : <img className="search-bar header-link" src={searchIcon} alt="search-bar" /> }
             </div>
-            <div className="cartbtn" onClick={() => showCarting(true)}>
-                { carting ?
-                    <div>
-                        <Cart />
-                        <Backdrop show={carting} set={showCarting} /> 
-                    </div>
-                : <img className="cartpic header-link" src={cart} alt="heart" /> }
-            </div>
-            <div className="favoritebtn" onClick={() => showSavedList(true)}>
-                { savedList ?
-                    <div>
-                        <SavedList />
-                        <Backdrop show={savedList} set={showSavedList} /> 
-                    </div>
-                : <img className="favs header-link" src={heart} alt="heart" /> }
-            </div>
-            <div className="profilebtn" onClick={() => showProfile(true)}>
-                { profile ?
-                    <div>
-                        <Profile />
-                        <Backdrop  show={profile} set={showProfile} /> 
-                    </div>
-                : <img className="account header-link" src={account} alt="head-shot" /> }
-            </div>
+        <img className="cartpic header-link" src={cart} alt="heart" /> 
+        <img className="favs header-link" src={heart} alt="heart" /> 
+        <img className="account header-link" src={account} alt="head-shot" /> 
         </div>
     )
 }
