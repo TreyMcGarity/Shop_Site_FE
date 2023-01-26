@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Damion&family=Tangerine:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 
 body {
     margin: auto;
-    // background-color: #FBFBFB;
+    height: 100%;
+
 
     .title {
         font-family: 'Tangerine', cursive;
-    }
-}
+        font-weight: bold;
+    };
+
+    .text {
+        font-family: 'Niconne', cursive;
+    };
+};
 

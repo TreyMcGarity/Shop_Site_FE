@@ -1,5 +1,22 @@
 .splash {
-    top: 0;
-    height: 50em;
-    // background-color: #FAF0E6;
+    height: 100vh;  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Niconne', cursive;
+    font-size: 1.5em;
+    background: linear-gradient(180deg, rgba(179,230,204,1) 0%, rgba(116,143,191,1) 100%);
+
+
+    h1 {
+        font-size: 5em;
+        font-family: 'Tangerine', cursive;
+        font-weight: bold;
+    }
+
+    img {
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+    }
 }
