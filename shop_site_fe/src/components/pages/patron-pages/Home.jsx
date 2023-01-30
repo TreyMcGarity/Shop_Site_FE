@@ -19,10 +19,10 @@ const Home = (props) => {
         <>
         <Header />
         <div className='home'>
-            <div className='promo'>
+            {/* <div className='promo'>
                 <h1>Free Shipping on Orders over $30</h1>
                 <p>Must have an account to access incredible deal offer!</p>
-            </div>
+            </div> */}
             <img src={Group} alt='group setting'/>
             <div className='model'>
                 <img src={Model1} alt='model with peace sign'/>
