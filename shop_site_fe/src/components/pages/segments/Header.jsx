@@ -34,22 +34,24 @@ const Header = () => {
                 : <img className="menu header-link" src={menu} alt="menu" /> }
             </div>
             <h1 className='title'>DECOREM</h1>
-            <div className="searchbtn" onClick={() => showSearching(true)}>
-                { searching ?
-                    <div>
-                        <Search 
-                            search={search} 
-                            handleChange={handleChange}
-                            handleSubmit={handleSubmit}
-                            showSearching={showSearching}
-                        />
-                        <Backdrop show={searching} set={showSearching} />
-                    </div>
-                : <img className="search-bar header-link" src={searchIcon} alt="search-bar" /> }
+            <div className='optionalbtn'>
+                <div className="searchbtn" onClick={() => showSearching(true)}>
+                    { searching ?
+                        <div>
+                            <Search 
+                                search={search} 
+                                handleChange={handleChange}
+                                handleSubmit={handleSubmit}
+                                showSearching={showSearching}
+                            />
+                            <Backdrop show={searching} set={showSearching} />
+                        </div>
+                    : <img className="search-bar header-link" src={searchIcon} alt="search-bar" /> }
+                </div>
+            <img className="cartpic header-link" src={cart} alt="heart" /> 
+            <img className="favs header-link" src={heart} alt="heart" /> 
+            <img className="account header-link" src={account} alt="head-shot" /> 
             </div>
-        <img className="cartpic header-link" src={cart} alt="heart" /> 
-        <img className="favs header-link" src={heart} alt="heart" /> 
-        <img className="account header-link" src={account} alt="head-shot" /> 
         </div>
     )
 }
