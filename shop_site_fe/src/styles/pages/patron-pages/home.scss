@@ -14,12 +14,16 @@ Black: #202020
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin: 0 10em;
+
+    @media (max-width: 800px) {
+        margin: 0 2em;
+    }
 
     .promo {
         background-color: #B3E6CC; //light green
         margin: 2em;
-        // width: 70%;
-        // background-color: #87EA9D; //green
+        padding: .5em;
     }
 
     .options {
@@ -36,9 +40,26 @@ Black: #202020
         }
     }
 
-    .carousel {
-        margin: 3em 0;
+    .icon-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-around;
+        margin: 2em 0;
+        padding: 1em;
+        border: .2em solid black;
+        border-radius: 1em;
     }
+
+    .icon {
+        height: 5em;
+        width: 5em;
+
+        @media (max-width: 800) {
+            height: 2em;
+            width: 2em;        
+        }
+    };
 
     .model {
         img {
