@@ -33,7 +33,7 @@ const Header = () => {
                     </div>
                 : <img className="menu header-link" src={menu} alt="menu" /> }
             </div>
-            <h1 className='title'>DECOREM</h1>
+            <h1 className='title'>Decorem</h1>
             <div className='optionalbtn'>
                 <div className="searchbtn" onClick={() => showSearching(true)}>
                     { searching ?
