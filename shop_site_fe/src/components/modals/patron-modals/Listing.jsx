@@ -7,16 +7,10 @@ const Listing = () => {
             <h1 className='options'>Browse</h1>
             <h1 className='options'>New</h1>
             <h1 className='options'>Popular</h1>
-            <h1 className='options'>Women</h1>
-            <h1 className='options'>Men</h1>
-            <h1 className='options'>Deals</h1>
+            <h1 className='options'>Wall Art</h1>
+            <h1 className='options'>Floating Decor</h1>
+            <h1 className='options'>Clothing</h1>
             <h1 className='options'>Collections</h1>
-            <div className='suggestion-contact'>
-                <p>Have any great ideas?</p>                
-                <form>
-                    <input></input>
-                </form>
-            </div>
         </div>
     )
 }

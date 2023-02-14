@@ -25,7 +25,7 @@ const Home = (props) => {
         <Header />
         <div className='home'>
             <div className='promo'>
-                <h1>Free Shipping on Orders over $30</h1>
+                <h1>Free Shipping on Orders over $50</h1>
                 <p>Must have an account to access incredible deal offer!</p>
             </div>
             <img src={Group} alt='group setting'/>
@@ -34,7 +34,7 @@ const Home = (props) => {
                 <img className='icon' src={Picture} alt='painting icon' />
                 <img className='icon' src={House} alt='house icon' />
                 <img className='icon' src={Shirt} alt='shirt icon' />
-                <img className='icon' src={Pants} alt='pants icon' />
+                <img className='icon' src={Pants} alt='Pants icon' />
             </div>
             <div className='model'>
                 <img src={Model1} alt='model with peace sign'/>
