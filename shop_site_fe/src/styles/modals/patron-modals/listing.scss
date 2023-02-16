@@ -1,6 +1,6 @@
 .listing {
     padding-top: 2.5em;
-    width: 45%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,10 @@
     }
 
     .options {
-        padding: 0 1em;
+        text-decoration: none;
+        font-size: 30px;
+        color: black;
+        padding: .5em;
     }
 
     .options:hover {
