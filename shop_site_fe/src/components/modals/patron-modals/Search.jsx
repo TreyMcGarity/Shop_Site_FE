@@ -4,13 +4,13 @@ import X from '../../../utils/images/header/X.png';
 import '../../../styles/modals/patron-modals/search.scss';
 
 const Search = props => {
+    console.log(props)
     return (
         <div className="searchBar">
             <img className="x" src={Searcher} alt="magnifing glass" onClick={() => {}} />
             <form onSubmit={props.handleSubmit}>
                 <input
                     type="text"
-                    name="email"
                     placeholder="search"
                     value={props.search}
                     onChange={props.handleChange}
