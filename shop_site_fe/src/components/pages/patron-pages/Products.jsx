@@ -13,7 +13,7 @@ const Products = props => {
 		dispatch(getProducts())
 	}, [dispatch]);
 
-    // products need a selected and saved flag that is tied to profile and relational to the listings
+    // products need a selected and saved flag that is tied to profile and relational to the listing
     return (
         <div>
             <Header />
